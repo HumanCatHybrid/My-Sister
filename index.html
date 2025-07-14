@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.2.3.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+  &lt;title&gt;For My Sister 💖&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: #0f111a;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .hearts {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+      background-size: contain;
+      animation: float 10s linear infinite;
+      opacity: 0.3;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) scale(1); opacity: 0; }
+      50% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+    }
+
+    .card {
+      position: relative;
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      z-index: 1;
+      max-width: 90%;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    h1 {
+      font-size: 1.7rem;
+      line-height: 1.6;
+      animation: fade 0.5s ease;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      .card {
+        padding: 20px 15px;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body onclick=&quot;nextMessage()&quot;&gt;
+
+  &lt;!-- Floating Hearts --&gt;
+  &lt;div class=&quot;hearts&quot;&gt;&lt;/div&gt;
+
+  &lt;!-- Background Music --&gt;
+  &lt;audio autoplay loop&gt;
+    &lt;source src=&quot;https://dl.sndup.net/9pxc/soft-piano-music.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+    Your browser does not support the audio element.
+  &lt;/audio&gt;
+
+  &lt;!-- Message Card (Image removed) --&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;h1 id=&quot;message&quot;&gt;Tap anywhere to begin... 👇&lt;/h1&gt;
+  &lt;/div&gt;
+
+  &lt;script&gt;
+    const messages = [
+      &quot;𝓗𝓮𝓵𝓵𝓸 sister 💝🙏🏻&quot;,
+      &quot;𝓣𝓱𝓪𝓷𝓴 𝔂𝓸𝓾 𝓯𝓸𝓻 𝓪𝓵𝔀𝓪𝔂𝓼 𝓫𝓮𝓲𝓷𝓰 𝓽𝓱𝓮𝓻𝓮 💖 🤗&quot;,
+      &quot; 𝔂𝓸𝓾'𝓻𝓮 𝓶𝔂 𝓫𝓲𝓰𝓰𝓮𝓼𝓽 𝓼𝓾𝓹𝓹𝓸𝓻𝓽 💪 💪&quot;,
+      &quot;𝓘 𝓶𝓪𝔂 𝓷𝓸𝓽 𝓼𝓪𝔂 𝓲𝓽 𝓸𝓯𝓽𝓮𝓷... 𝓫𝓾𝓽 𝓘 𝓽𝓻𝓾𝓵𝔂 𝓪𝓭𝓶𝓲𝓻𝓮 𝔂𝓸𝓾 🥺🥺&quot;,
+      &quot;𝓨𝓸𝓾'𝓻𝓮 𝓷𝓸𝓽 𝓳𝓾𝓼𝓽 𝓪 Sister  𝔂𝓸𝓾'𝓻𝓮 𝓶𝔂 personal chudail 💙❤️&quot;,
+      &quot;Sorry na 🥺😭𝓛𝓸𝓿𝓮 𝔂𝓸𝓾 𝓯𝓸𝓻𝓮𝓿𝓮𝓻 💖💖&quot;,
+      &quot;𝓜𝓪𝓭𝓮 𝓫𝔂  𝓟𝓻𝓪𝓰𝓪𝓽𝓲 ✨ 🥹🥹  &quot;
+    ];
+
+    const msgEl = document.getElementById('message');
+    let index = 0;
+
+    function nextMessage() {
+      if (index &lt; messages.length) {
+        msgEl.textContent = messages[index];
+        index++;
+      } else {
+        msgEl.textContent = &quot;That’s all , chudail ! 🧸❤️ Tap to restart.&quot;;
+        index = 0;
+      }
+    }
+
+    // floating hearts animation
+    const heartsContainer = document.querySelector('.hearts');
+    for (let i = 0; i &lt; 30; i++) {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 5 + Math.random() * 10 + 's';
+      heart.style.animationDelay = Math.random() * 5 + 's';
+      heartsContainer.appendChild(heart);
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
